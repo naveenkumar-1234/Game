@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./assets/logo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import console from "./assets/Console.png";
 import friendsImg from "./assets/friendImg.png";
 import BgFrame from "./assets/bgFrame.png";
@@ -33,10 +33,16 @@ const HomePage = () => {
           text-xl
           "
           >
-            <NavLink to="/memory">Memory Card Game</NavLink>
-            <NavLink to="/tictactoe">TIC TAC TOE</NavLink>
-            <NavLink to="/wordguess">Word Guessing</NavLink>
-            <NavLink to="/rockpaper">Rock Paper Scissor</NavLink>
+            <NavLink to="https://specials.manoramaonline.com/Mobile/2022/flip-game/index.html">
+              Memory Card Game
+            </NavLink>
+            <NavLink to="https://playtictactoe.org/">TIC TAC TOE</NavLink>
+            <NavLink to="https://metzger.media/games/word-guess/">
+              Word Guessing
+            </NavLink>
+            <NavLink to="https://www.rpsgame.org/random">
+              Rock Paper Scissor
+            </NavLink>
           </nav>
           {/* Navigation */}
         </div>
@@ -59,13 +65,14 @@ const HomePage = () => {
               an engaging games like TIC TAC TOE, MEMORY CARD GAME,WORD GUESSING
               GAME, ROCK PAPER SCIRRORS GAME
             </div>
-            <button
+            <Link
+              to="https://playtictactoe.org/"
               className="bg-[#ff1dd7] text-3xl font-semibold px-4 py-3 font-teko text-white 
               text-center my-5
             "
             >
               PLAY NOW
-            </button>
+            </Link>
           </div>
         </div>
 
