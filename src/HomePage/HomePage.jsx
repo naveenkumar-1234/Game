@@ -33,7 +33,7 @@ const HomePage = () => {
           text-xl
           "
           >
-            <NavLink to="https://www.helpfulgames.com/subjects/brain-training/memory.html">
+            <NavLink to="https://specials.manoramaonline.com/Mobile/2022/flip-game/index.html">
               Memory Card Game
             </NavLink>
             <NavLink to="https://playtictactoe.org/">TIC TAC TOE</NavLink>
