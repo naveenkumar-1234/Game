@@ -33,14 +33,14 @@ const HomePage = () => {
           text-xl
           "
           >
-            <NavLink to="https://specials.manoramaonline.com/Mobile/2022/flip-game/index.html">
+            <NavLink to="/memory">
               Memory Card Game
             </NavLink>
-            <NavLink to="https://playtictactoe.org/">TIC TAC TOE</NavLink>
-            <NavLink to="https://metzger.media/games/word-guess/">
+            <NavLink to="/tictactoe">TIC TAC TOE</NavLink>
+            <NavLink to="/wordguess">
               Word Guessing
             </NavLink>
-            <NavLink to="https://www.rpsgame.org/random">
+            <NavLink to="/rockpaper">
               Rock Paper Scissor
             </NavLink>
           </nav>
