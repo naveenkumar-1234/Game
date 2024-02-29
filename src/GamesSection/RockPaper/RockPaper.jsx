@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './RockPaper.css';
-
+import { FaHandRock } from "react-icons/fa";
+import { FaHandPaper } from "react-icons/fa";
+import { FaHandScissors } from "react-icons/fa";
 const RockPaper = () => {
   const [userChoice, setUserChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
@@ -22,13 +24,15 @@ const RockPaper = () => {
   };
 
   const choices = ['rock', 'paper', 'scissors'];
-
+  const icons=[<FaHandRock/>,<FaHandPaper/>,<FaHandScissors/>]
   return (
     <div className="rock-paper-container" style={{ height: '100vh', width: '100vw' }}>
       <h2>Rock Paper Scissors</h2>
       <div className="choices">
         {choices.map((choice) => (
-          <button key={choice} onClick={() => playGame(choice)}>{choice}</button>
+          <button key={choice} onClick={() => playGame(choice)}>{choice}
+          
+          </button>
         ))}
       </div>
       {userChoice && computerChoice && (
