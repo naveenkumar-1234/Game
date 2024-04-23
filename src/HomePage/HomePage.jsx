@@ -1,12 +1,19 @@
 import React from "react";
 import logo from "./assets/logo.png";
-import { Link, NavLink } from "react-router-dom";
-import console from "./assets/Console.png";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import con from "./assets/Console.png";
 import friendsImg from "./assets/friendImg.png";
 import BgFrame from "./assets/bgFrame.png";
 
 
 const HomePage = () => {
+  var nav = useNavigate()
+  const RandomGame = ()=>{
+    var games = ['memory','rockpaper','wordguess','tictactoe']
+    var randomGame = games[Math.floor(Math.random() * games.length)]
+    nav(randomGame)
+    
+  }
   const backgroundImageUrl = BgFrame;
   const containerStyle = {
     backgroundImage: `url(${backgroundImageUrl})`,
@@ -65,20 +72,21 @@ const HomePage = () => {
               an engaging games like TIC TAC TOE, MEMORY CARD GAME,WORD GUESSING
               GAME, ROCK PAPER SCIRRORS GAME
             </div>
-            <Link
-              to="https://playtictactoe.org/"
+            <button
+            onClick={()=>RandomGame()}
+              
               className="bg-[#ff1dd7] text-3xl font-semibold px-4 py-3 font-teko text-white 
               text-center my-5
             "
             >
               PLAY NOW
-            </Link>
+            </button>
           </div>
         </div>
 
-        {/* Game console image added by using POSITION property*/}
+        {/* Game con image added by using POSITION property*/}
         <div className="absolute right-0 bottom-0 z-10">
-          <img src={console} alt="" className="lg:w-[32rem]" />
+          <img src={con} alt="" className="lg:w-[32rem]" />
         </div>
         {/* GroupFriends image added by using POSITION property */}
         <div className="absolute  bottom-8 rotate-[15deg] right-[300px]">
